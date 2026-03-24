@@ -1,0 +1,32 @@
+bugzilla:
+  url: "https://bugzilla.example.com"
+
+  # Auth
+  # Option A:
+  # api_key: "PUT_YOUR_API_KEY_HERE"
+
+  # Option B:
+  login: "you@example.com"
+
+  # Optional only if bug queries must use a different value than login
+  # query_user: "you@example.com"
+
+  # Password handling:
+  # 1) recommended:
+  password_env: "BUGZILLA_PASSWORD"
+  # 2) fallback:
+  # password: "PUT_YOUR_PASSWORD_HERE"
+
+  review_fields:
+    - cf_reviewers
+    - cf_reviewer
+    - cf_code_review
+
+  timeout: 25
+  max_retries: 3
+  retry_backoff_seconds: 1.5
+  verify_tls: true
+
+logging:
+  level: "INFO"
+  file: "~/.cache/bugzilla-tool/bugzilla-tool.log"
