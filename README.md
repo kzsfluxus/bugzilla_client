@@ -1,11 +1,11 @@
-# bugzilla-tool v5
+# bugzilla_client
 
-Ez a verzió már a tisztább auth-modellt használja:
+Auth-modell:
 
 - `login` a belépéshez
 - `query_user` csak akkor kell, ha a bug-szűréshez más érték kell
 - jelszó `.secrets` fájlból vagy env változóból
-- API key továbbra is támogatott
+- API key támogatott
 - TUI + CLI ugyanarra az API-rétegre
 
 ## Ajánlott felépítés
@@ -69,7 +69,7 @@ chmod 600 .secrets
 ./run.sh show 123456
 ./run.sh comment 123456 -m "Elkezdtem" --hours 1.0
 ```
-
+ 
 ## TUI
 
 ```bash
